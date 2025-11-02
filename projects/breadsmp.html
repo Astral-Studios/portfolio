@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreadSMP - Project Details</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Astral</div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="project-header">
+        <div class="container">
+            <a href="../index.html#projects" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            <h1>BreadSMP</h1>
+            <h2>Operations Manager</h2>
+            <h3>September 2, 2025 - Present</h3>
+            <a href="https://spexce.net" target="_blank" rel="noopener noreferrer" class="project-link">
+                Visit Website <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </div>
+
+    <section class="info-section">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <div class="info-content">
+                <p>
+                    As Operations Manager at BreadSMP, I oversee the complete technical infrastructure and operational systems for a thriving Minecraft server community. This role encompasses both technical management and organizational leadership, ensuring smooth operations across all platforms.
+                </p>
+
+                <h3>Key Responsibilities</h3>
+                <ul>
+                    <li>Overseeing technical infrastructure including Pterodactyl Panel management.</li>
+                    <li>Managing Discord Server and community moderation.</li>
+                    <li>Maintaining website infrastructure and ensuring optimal performance.</li>
+                    <li>Store management and payment processing systems.</li>
+                    <li>Creating comprehensive documentation including staff handbooks and application forms.</li>
+                    <li>Handling server deployments and performance tuning.</li>
+                    <li>Coordinating with staff team and implementing operational procedures.</li>
+                    <li>Monitoring server health and implementing preventive maintenance.</li>
+                </ul>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>Pterodactyl Panel - Server orchestration and management</li>
+                    <li>Linux (Debian 12) - Server Operating Systems</li>
+                    <li>Nginx - Web server and reverse proxy configuration</li>
+                    <li>MariaDB - Database administration</li>
+                    <li>Word / Docs - Documentation creation</li>
+                </ul>
+
+                <h3>Documentation & Processes</h3>
+                <p>
+                    Developed comprehensive staff handbooks covering server policies, moderation guidelines, and technical procedures. Created streamlined application forms for staff positions and implemented
+                    systematic onboarding processes. Established standard operating procedures for server deployments, backup protocols, and incident response.
+                </p>
+
+                <h3>Achievements</h3>
+                <p>
+                    Successfully streamlined operational workflows, reducing response time to technical issues by 60%. Implemented automated deployment systems that decreased server update time from hours to minutes. Created documentation framework that improved staff onboarding efficiency and consistency across the team.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Project Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/" alt="Dashboard Overview">
+                    <div class="gallery-item-caption">Dashboard Overview</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/" alt="Discord Setup">
+                    <div class="gallery-item-caption">Discord Setup</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/" alt="Performance Metrics">
+                    <div class="gallery-item-caption">Performance Metrics</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/" alt="Store Interface">
+                    <div class="gallery-item-caption">Store Interface</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/" alt="Website Homepage">
+                    <div class="gallery-item-caption">Website Homepage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Astral. All rights reserved.</p>
+    </footer>
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+    </div>
+    <script>
+        // Open lightbox when gallery image is clicked
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function () {
+                document.getElementById('lightbox').classList.add('active');
+                document.getElementById('lightbox-img').src = this.src;
+                document.getElementById('lightbox-img').alt = this.alt;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox function
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+
+</html>

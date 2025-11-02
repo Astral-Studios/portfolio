@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spexce Website - Project Details</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Astral</div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="project-header">
+        <div class="container">
+            <a href="../index.html#projects" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            <h1>Spexce Website</h1>
+            <a href="https://spexce.net" target="_blank" rel="noopener noreferrer" class="project-link">
+                Visit Website <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </div>
+
+    <section class="info-section">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <div class="info-content">
+                <p>
+                    The Spexce Website serves as the central hub for the Spexce ATM10 Minecraft Server community. Built on the NamelessMC platform, this website provides players with access to server information, news updates, staff applications, and community features.
+                </p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Dynamic news post system for server announcements and updates using the Ghost Module.</li>
+                    <li>Comprehensive staff application forms with custom fields.</li>
+                    <li>Server status monitoring and real-time player counts.</li>
+                    <li>Integrated Discord connection for unified community experience.</li>
+                    <li>Custom theme - Cobalt Theme from <a href="https://coldfiredzn.com/" target="_blank">https://coldfiredzn.com/</a></li>
+                </ul>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>NamelessMC - Content management system</li>
+                    <li>MySQL - Database management</li>
+                    <li>HTML/CSS - Frontend customization</li>
+                </ul>
+
+                <h3>Community Integration</h3>
+                <p>
+                    Successfully integrated Discord widgets and server status displays, creating a seamless connection between the website and other community platforms. Implemented automated news posting systems and configured application workflows that streamline staff recruitment processes. The website serves as the primary information source for new and existing players.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Project Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/SpexceWebsite/MainPage.png" alt="Main Page">
+                    <div class="gallery-item-caption">Main Page</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/SpexceWebsite/RulesPage.png" alt="Rules Page">
+                    <div class="gallery-item-caption">Rules Page</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/SpexceWebsite/VotePage.png" alt="Vote Page">
+                    <div class="gallery-item-caption">Vote Page</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/SpexceWebsite/Wiki.png" alt="Wiki Page">
+                    <div class="gallery-item-caption">Wiki Page</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Astral. All rights reserved.</p>
+    </footer>
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+    </div>
+    <script>
+        // Open lightbox when gallery image is clicked
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function () {
+                document.getElementById('lightbox').classList.add('active');
+                document.getElementById('lightbox-img').src = this.src;
+                document.getElementById('lightbox-img').alt = this.alt;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox function
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+
+</html>

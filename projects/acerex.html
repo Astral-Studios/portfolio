@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AceRex Network - Project Details</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">Astral</div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="project-header">
+        <div class="container">
+            <a href="../index.html#projects" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+            <h1>AceRex Network</h1>
+            <h2>Chief Operating Officer</h2>
+            <h3>April 19, 2025 - Oct 12, 2025</h3>
+            <a href="https://acerex.net" target="_blank" rel="noopener noreferrer" class="project-link">
+                Visit Website <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </div>
+
+    <section class="info-section">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <div class="info-content">
+                <p>
+                    As Chief Operating Officer at AceRex Network, I managed the complete technical infrastructure for a
+                    growing Minecraft server community. This role required balancing multiple systems and ensuring
+                    optimal performance across all platforms.
+                </p>
+
+                <h3>Key Responsibilities</h3>
+                <ul>
+                    <li>Managing Pterodactyl Panel for server orchestration and resource allocation.</li>
+                    <li>Overseeing Discord server with custom bots and moderation systems.</li>
+                    <li>Maintaining website infrastructure and ensuring 99.9% uptime.</li>
+                    <li>Managing store infrastructure and payment processing.</li>
+                    <li>Optimizing server performance - RAM, CPU Threads, Storage Allocation.</li>
+                    <li>Implementing backup systems and disaster recovery protocols.</li>
+                </ul>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>Pterodactyl Panel - Server management and deployment</li>
+                    <li>Linux (Debian 12) - Server Operating Systems</li>
+                    <li>Nginx - Web Server and Reverse Proxy</li>
+                    <li>MySQL / MariaDB - Database Management</li>
+                    <li>Docker - Containerization and Deployment</li>
+                </ul>
+
+                <h3>Achievements</h3>
+                <p>
+                    Successfully managed infrastructure supporting over 50 concurrent players, reduced server downtime
+                    by 95%, and implemented automated backup systems that prevented data loss during critical incidents.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Project Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/acerex/dashboard.png" alt="Dashboard Overview">
+                    <div class="gallery-item-caption">Dashboard Overview</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/acerex/DiscordSetup.png" alt="Discord Setup">
+                    <div class="gallery-item-caption">Discord Setup</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/acerex/PerformanceMetrics.png" alt="Performance Metrics">
+                    <div class="gallery-item-caption">Performance Metrics</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/acerex/StoreInterface.png" alt="Store Interface">
+                    <div class="gallery-item-caption">Store Interface</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/acerex/WebsiteHomepage.png" alt="Website Homepage">
+                    <div class="gallery-item-caption">Website Homepage</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/acerex/Crates_VoteLeaderboard.png" alt="Crates & Voting Leaderboard">
+                    <div class="gallery-item-caption">Crates & Voting Leaderboard</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/acerex/Kill_Death_Playtime_Leaderboards.png" alt="Kill, Death and Playtime Leaderboards">
+                    <div class="gallery-item-caption">Kill, Death and Playtime_Leaderboards</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/acerex/WelcomeHolo.png" alt="Kill, Death and Playtime Leaderboards">
+                    <div class="gallery-item-caption">Welcome Hologram</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Astral. All rights reserved.</p>
+    </footer>
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+    </div>
+    <script>
+        // Open lightbox when gallery image is clicked
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', function () {
+                document.getElementById('lightbox').classList.add('active');
+                document.getElementById('lightbox-img').src = this.src;
+                document.getElementById('lightbox-img').alt = this.alt;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox function
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+
+</html>
